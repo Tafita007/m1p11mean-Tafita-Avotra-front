@@ -1,0 +1,14 @@
+/node_modules
+/dist
+
+/src/environments/environment.ts
+/src/environments/environment.prod.ts
+
+*~
+*.swp
+*.tmp
+
+/.vscode
+/.idea
+
+/logs
