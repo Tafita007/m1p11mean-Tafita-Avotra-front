@@ -1,0 +1,42 @@
+<!-- partial:partials/_sidebar.html -->
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <div class="user-profile">
+    <div class="user-image">
+        <img src="images/faces/face28.png">
+    </div>
+    <div class="user-name">
+        Edward Spencer
+    </div>
+    <div class="user-designation">
+        Developer
+    </div>
+    </div>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/manager/home/gestion-du-personnel">
+            <i class="icon-head menu-icon"></i>
+            <span class="menu-title">Gestion personnel</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/manager/home/gestion-des-services">
+            <i class="icon-help menu-icon"></i>
+            <span class="menu-title">Gestion des services</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <i class="icon-pie-graph menu-icon"></i>
+                <span class="menu-title">Statistiques</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" routerLink="/dashboard/travaux-informatique/nombre-de-demande-par-statut">Buttons</a></li>
+                    <li class="nav-item"> <a class="nav-link" routerLink="/dashboard/travaux-informatique/nombre-de-demande-par-statut">Typography</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</nav>
+<!-- partial -->

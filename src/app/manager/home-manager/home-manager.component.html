@@ -1,0 +1,23 @@
+<div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <app-header-manager>
+    </app-header-manager>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_sidebar.html -->
+        <app-sidebar-manager></app-sidebar-manager>
+        <!-- partial -->
+        <div class="main-panel">
+            <div class="content-wrapper">
+                <router-outlet></router-outlet>
+            </div>
+            <!-- content-wrapper ends -->
+            <!-- partial:partials/_footer.html -->
+            <app-footer-manager></app-footer-manager>
+            <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+</div>
+<!-- container-scroller -->

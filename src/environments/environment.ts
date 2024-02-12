@@ -3,8 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: 'http://localhost:3000', 
 };
+
+if (environment.production) {
+  environment.apiUrl = ''; 
+}
+
+if (process.env["NODE_ENV"] === 'test') {
+  environment.apiUrl = ''; // URL de l'API pour le test
+}
 
 /*
  * For easier debugging in development mode, you can import the following file
