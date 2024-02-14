@@ -9,7 +9,7 @@ import { ClientRoutingModule } from './client/client-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
-    ClientComponent
+    ClientComponent,
   ],
   imports: [
     BrowserModule,
