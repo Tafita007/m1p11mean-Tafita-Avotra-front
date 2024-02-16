@@ -6,6 +6,7 @@ import { InscriptionComponent } from './inscription/inscription.component';
 import { HomeComponent } from './home/home.component';
 import { FooterClientComponent } from './footer-client/footer-client.component';
 import { HeaderClientComponent } from './header-client/header-client.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { HeaderClientComponent } from './header-client/header-client.component';
   ],
   imports: [
     CommonModule,
+    HttpClientModule,
     ClientRoutingModule
   ]
 })
