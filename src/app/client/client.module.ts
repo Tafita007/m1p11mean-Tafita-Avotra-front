@@ -7,19 +7,23 @@ import { HomeComponent } from './home/home.component';
 import { FooterClientComponent } from './footer-client/footer-client.component';
 import { HeaderClientComponent } from './header-client/header-client.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginClientComponent } from './login-client/login-client.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     InscriptionComponent,
     HomeComponent,
+    LoginClientComponent,
     FooterClientComponent,
     HeaderClientComponent
   ],
   imports: [
     CommonModule,
     HttpClientModule,
-    ClientRoutingModule
+    ClientRoutingModule,
+    FormsModule,
   ]
 })
 export class ClientModule { }

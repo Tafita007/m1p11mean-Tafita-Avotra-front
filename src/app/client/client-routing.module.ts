@@ -4,6 +4,7 @@ import { ClientComponent } from './client.component';
 import { HomeComponent } from './home/home.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { LoginEmployeComponent } from '../employe/login-employe/login-employe.component';
+import { LoginClientComponent } from './login-client/login-client.component';
 
 const routes: Routes = [
   {
@@ -12,7 +13,7 @@ const routes: Routes = [
     children: [
       { path: "services", component: HomeComponent },
       { path: "inscription", component: InscriptionComponent },
-      { path: "login", component: LoginEmployeComponent },
+      { path: "login", component: LoginClientComponent },
     ]
   },
 ];

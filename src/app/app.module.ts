@@ -7,6 +7,7 @@ import { ClientComponent } from './client/client.component';
 import { ClientRoutingModule } from './client/client-routing.module';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     CommonModule,
     HttpClientModule,
+    FormsModule,
     AppRoutingModule,
     ClientRoutingModule
   ],

@@ -1,4 +1,5 @@
 export class Service {
+    _id!: Number;
     nom!: string;
     prix!: Number;
     commission!: string;

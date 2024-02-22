@@ -9,6 +9,7 @@ import { SuiviTacheComponent } from './suivi-tache/suivi-tache.component';
 import { HeaderEmployeComponent } from './header-employe/header-employe.component';
 import { SidebarEmployeComponent } from './sidebar-employe/sidebar-employe.component';
 import { FooterEmployeComponent } from './footer-employe/footer-employe.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { FooterEmployeComponent } from './footer-employe/footer-employe.componen
   ],
   imports: [
     CommonModule,
+    FormsModule,
     HomeEmployeRoutingModule
   ]
 })
