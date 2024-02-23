@@ -9,6 +9,7 @@ import { HeaderClientComponent } from './header-client/header-client.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginClientComponent } from './login-client/login-client.component';
 import { FormsModule } from '@angular/forms';
+import { ListRdvComponent } from './list-rdv/list-rdv.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     LoginClientComponent,
     FooterClientComponent,
-    HeaderClientComponent
+    HeaderClientComponent,
+    ListRdvComponent
   ],
   imports: [
     CommonModule,
