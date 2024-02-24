@@ -9,7 +9,10 @@ import { AuthService } from 'src/app/Auth/service/auth.service';
 })
 export class InscriptionComponent implements OnInit {
 
-  
+  nom: string = '';
+  prenom: string = '';
+  email: string = '';
+  numero: string = '';
   username: string = '';
   password: string = '';
   errorMessage: string | null = null;
@@ -20,7 +23,18 @@ export class InscriptionComponent implements OnInit {
   }
 
   onSignup(): void {
-    this.authService.signup({ username: this.username, password: this.password }).subscribe(
+    this.authService.signup(
+      { 
+        username: this.username, 
+        password: this.password,
+        infosPerso: {
+          nom: this.nom,
+          prenom: this.prenom,
+          email: this.email,
+          numero: this.numero
+        }
+      }
+    ).subscribe(
       success => {
         if (success) {
           this.router.navigate(['/salon/login']);

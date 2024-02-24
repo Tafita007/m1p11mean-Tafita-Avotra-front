@@ -47,4 +47,5 @@ export class AuthService {
     this.token = null;
     localStorage.removeItem('token') ;
   }
+
 }
