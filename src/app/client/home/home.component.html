@@ -1,6 +1,11 @@
 <app-header-client></app-header-client>
 
 <!-- Services Start -->
+
+<button mat-fab [disabled]="basketService.length == 0" [matBadge]="basketService.length" class="basket-button" (click)="openBasket()">
+    <mat-icon>shopping_cart</mat-icon>
+</button>
+
 <div class="container-fluid services py-5">
     <div class="container py-5">
         <div class="mx-auto text-center mb-5" style="max-width: 800px;">
@@ -16,7 +21,7 @@
                                 <h3>{{ service.nom }}</h3>
                                 <p>durée : {{ service.duree }}</p>
                                 <p>prix : {{ service.prix }}</p>
-                                <a href="#" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Prendre</a>
+                                <button  (click)="addToBasket(service)" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Prendre</button>
                             </div>
                         </div>
                         <div class="col-4">

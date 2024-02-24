@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/Auth/service/auth.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login-client',
@@ -24,6 +25,12 @@ export class LoginClientComponent implements OnInit {
         if (success) {
           this.router.navigate(['/salon/services']);
         } else {
+          Swal.fire({
+            title: "Nom d'utilisateur ou mot de passe incorrecte",
+            icon: 'warning',
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: 'OK'
+          });
           this.errorMessage = "Nom d'utilisateur ou mot de passe incorrect";
         }
       },
