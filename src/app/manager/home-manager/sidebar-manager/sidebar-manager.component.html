@@ -2,7 +2,7 @@
 <div class="sidebar pe-4 pb-3">
     <nav class="navbar bg-light navbar-light">
         <a routerLink="/manager/home/gestion-du-personnel" class="navbar-brand mx-4 mb-3">
-            <h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>DASHMIN</h3>
+            <h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>MANAGER</h3>
         </a>
         <div class="d-flex align-items-center ms-4 mb-4">
             <div class="position-relative">
@@ -11,12 +11,13 @@
             </div>
             <div class="ms-3">
                 <h6 class="mb-0">Jhon Doe</h6>
-                <span>Admin</span>
+                <span>Manager</span>
             </div>
         </div>
         <div class="navbar-nav w-100">
-            <a href="index.html" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-            <div class="nav-item dropdown">
+            <a routerLink="/manager/home/gestion-du-personnel" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+            <a routerLink="/manager/home/gestion-des-services" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+            <!-- <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Elements</a>
                 <div class="dropdown-menu bg-transparent border-0">
                     <a href="button.html" class="dropdown-item">Buttons</a>
@@ -36,59 +37,8 @@
                     <a href="404.html" class="dropdown-item">404 Error</a>
                     <a href="blank.html" class="dropdown-item">Blank Page</a>
                 </div>
-            </div>
+            </div> -->
         </div>
     </nav>
 </div>
 <!-- Sidebar End -->
-
-
-
-
-
-
-
-
-
-<!-- partial:partials/_sidebar.html -->
-<!-- <nav class="sidebar sidebar-offcanvas" id="sidebar">
-    <div class="user-profile">
-    <div class="user-image">
-        <img src="images/faces/face28.png">
-    </div>
-    <div class="user-name">
-        Edward Spencer
-    </div>
-    <div class="user-designation">
-        Developer
-    </div>
-    </div>
-    <ul class="nav">
-        <li class="nav-item">
-            <a class="nav-link" routerLink="/manager/home/gestion-du-personnel">
-            <i class="icon-head menu-icon"></i>
-            <span class="menu-title">Gestion personnel</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" routerLink="/manager/home/gestion-des-services">
-            <i class="icon-help menu-icon"></i>
-            <span class="menu-title">Gestion des services</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                <i class="icon-pie-graph menu-icon"></i>
-                <span class="menu-title">Statistiques</span>
-                <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="ui-basic">
-                <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" routerLink="/dashboard/travaux-informatique/nombre-de-demande-par-statut">Buttons</a></li>
-                    <li class="nav-item"> <a class="nav-link" routerLink="/dashboard/travaux-informatique/nombre-de-demande-par-statut">Typography</a></li>
-                </ul>
-            </div>
-        </li>
-    </ul>
-</nav> -->
-<!-- partial -->
