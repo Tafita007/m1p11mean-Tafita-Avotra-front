@@ -21,7 +21,7 @@ export class LesServicesService {
     return this.http.post<any>(`${this.apiUrl}/insertService`, service);
   }
 
-  updateService(id: Number, service: any): Observable<any> {
+  updateService(id: string, service: any): Observable<any> {
     return this.http.put<any>(`${this.apiUrl}/updateService/${id}`, service);
   }
   
