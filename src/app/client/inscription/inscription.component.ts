@@ -48,6 +48,16 @@ export class InscriptionComponent implements OnInit {
       },
       response => {    
         // si le statut == 201 => celà veut dire que l'utilsateur a été créé
+        console.log( { 
+          username: this.username,
+          password: this.password,
+          infosPerso : {
+            nom : this.nom,
+            prenom : this.prenom,
+            email : this.email,
+            numero : this.numero,
+          }
+        });
         if(response.status == 201){
 
           Swal.fire({
