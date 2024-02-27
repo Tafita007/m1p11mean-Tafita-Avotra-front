@@ -3,10 +3,18 @@
     <div class="row g-4">
         <div class="col-12">
             <div class="bg-light rounded h-100 p-4">
-                <h6 class="mb-4">Les services</h6>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalAjout">
-                    +
-                </button>
+                <div class="row">
+                    <div class="col-md-8">
+                        <h6 class="mb-4">Les services</h6>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-end">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalAjout">
+                            Ajouter  <i class="fa fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                
+            
                 <div class="table-responsive">
                     <table class="table">
                         <thead>
@@ -25,14 +33,12 @@
                                 <td>{{ service.commission }}</td>
                                 <td>{{ service.duree }}</td>
                                 <td>
-                                
-                                    <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                        Changer
+                                    <button type="button" class="btn btn-warning" (click)="formUpdate(service)" data-bs-toggle="modal" [attr.data-bs-target]="'#exampleModal' + service._id">
+                                        <i class="fa fa-edit"></i>
                                     </button>
-  
+                            
                                     <!-- Modal -->
-                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal fade" [id]="'exampleModal' + service._id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
@@ -40,7 +46,7 @@
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <form id="modalForm" [formGroup]="ficheForm" (ngSubmit)="onUpdateService()">
+                                                    <form id="modalForm" [formGroup]="ficheFormUpdate" (ngSubmit)="onUpdateService()">
                                                         <div class="mb-3">
                                                             <label for="name" class="form-label">Designation:</label>
                                                             <input type="text" class="form-control" formControlName="nom" required>
@@ -57,7 +63,6 @@
                                                             <label for="name" class="form-label">Duree:</label>
                                                             <input type="text" class="form-control" formControlName="duree" required>
                                                         </div>
-                                                        <!-- <input type="hidden" formControlName="_id" [(ngModel)]="service._id"> -->
                                                         <button class="btn btn-warning">Change</button>
                                                     </form>
                                                 </div>
@@ -66,6 +71,7 @@
                                     </div>
                                 </td>
                             </tr>
+                            
                         </tbody>
                     </table>
                 </div>
@@ -74,7 +80,6 @@
     </div>
 </div>
 <!-- Table End -->
-
 
 <!-- Modal Ajout -->
 <div class="modal fade" id="exampleModalAjout" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
