@@ -4,6 +4,7 @@ import { Service } from 'src/app/class/service';
 import { LesServicesService } from 'src/app/service/les-services.service';
 import { BasketDialogComponent } from './basket-dialog/basket-dialog.component';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
