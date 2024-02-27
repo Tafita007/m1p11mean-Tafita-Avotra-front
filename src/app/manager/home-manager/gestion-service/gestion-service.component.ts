@@ -20,20 +20,46 @@ export class GestionServiceComponent implements OnInit {
   errorMessage: string | null = null;
 
   public ficheForm!: FormGroup;
+  public ficheFormUpdate!: FormGroup;
 
-  constructor(private categorieService: CategorieService,private lesServicesService: LesServicesService, private formBuilder: FormBuilder) {}
+  constructor(
+    private categorieService: CategorieService,
+    private lesServicesService: LesServicesService,
+    private formBuilder: FormBuilder
+  ) {}
 
   ngOnInit(): void {
-
     this.categorieService.getCategories().subscribe(categories => {
-      this.categories = [...categories];
+        this.categories = [...categories];
     });
 
     this.lesServicesService.getServices().subscribe(services => {
-      this.services = [...services];
+        this.services = [...services];
+        if (this.services.length > 0) {
+            this.serviceUpdated = this.services[0];
+            this.formUpdate(this.serviceUpdated);
+        }
     });
+
     this.initForm();
   }
+
+
+  formUpdate(service: Service): void {
+    if (service) {
+        this.ficheFormUpdate = this.formBuilder.group({
+            nom: [service.nom, [Validators.required]],
+            prix: [service.prix, [Validators.required]],
+            commission: [service.commission, [Validators.required]],
+            duree: [service.duree, [Validators.required]],
+            idCategorie: [service.idCategorie, [Validators.required]],
+        });
+    } else {
+        console.error('Service is undefined.');
+    }
+  }
+
+
 
   initForm(): void {
     this.ficheForm = this.formBuilder.group({
