@@ -5,6 +5,8 @@ import { EmployeRoutingModule } from './employe-routing.module';
 import { EmployeComponent } from './employe.component';
 import { LoginEmployeComponent } from './login-employe/login-employe.component';
 import { HomeEmployeComponent } from './home-employe/home-employe.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -15,6 +17,8 @@ import { HomeEmployeComponent } from './home-employe/home-employe.component';
   ],
   imports: [
     CommonModule,
+    HttpClientModule,
+    FormsModule,
     EmployeRoutingModule
   ]
 })

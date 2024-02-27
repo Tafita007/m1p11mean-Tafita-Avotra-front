@@ -8,6 +8,7 @@ import { GestionServiceComponent } from './gestion-service/gestion-service.compo
 import { HeaderManagerComponent } from './header-manager/header-manager.component';
 import { SidebarManagerComponent } from './sidebar-manager/sidebar-manager.component';
 import { FooterManagerComponent } from './footer-manager/footer-manager.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -22,6 +23,8 @@ import { FooterManagerComponent } from './footer-manager/footer-manager.componen
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     HomeManagerRoutingModule
   ]
 })

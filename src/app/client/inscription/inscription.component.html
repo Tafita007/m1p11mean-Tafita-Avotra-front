@@ -1,1 +1,158 @@
-<p>inscription works!</p>
+<app-header-client></app-header-client>
+
+<div class="container-fluid services py-5">
+  <div class="container py-5">
+    <div class="row g-4">
+      <div class="col-lg-6 d-flex align-items-center justify-content-center">
+        <div class="auth-form-transparent text-left p-3">
+          <div class="brand-logo">
+            <img src="./assets/images/logo-dark.svg" alt="logo" />
+          </div>
+          <h4>INSCRIPTION</h4>
+          <form (ngSubmit)="onSignup()" class="pt-3">
+            <div class="form-group">
+              <label for="exampleInputEmail">Nom d'utilisateur</label>
+              <div class="input-group">
+                <div class="input-group-prepend bg-transparent">
+                  <span class="input-group-text bg-transparent border-right-0">
+                    <i class="mdi mdi-account-outline text-primary"></i>
+                  </span>
+                </div>
+
+                <input
+                  type="text"
+                  class="form-control form-control-lg border-left-0"
+                  id="exampleInputUsername"
+                  placeholder="Nom d'utilisateur"
+                  [(ngModel)]="username"
+                  name="username"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword">Mot de passe</label>
+              <div class="input-group">
+                <div class="input-group-prepend bg-transparent">
+                  <span class="input-group-text bg-transparent border-right-0">
+                    <i class="mdi mdi-lock-outline text-primary"></i>
+                  </span>
+                </div>
+                <input
+                  type="password"
+                  class="form-control form-control-lg border-left-0"
+                  id="exampleInputPassword"
+                  placeholder="Mot de passe"
+                  [(ngModel)]="password"
+                  name="password"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputEmail">nom</label>
+              <div class="input-group">
+                <div class="input-group-prepend bg-transparent">
+                  <span class="input-group-text bg-transparent border-right-0">
+                    <i class="mdi mdi-account-outline text-primary"></i>
+                  </span>
+                </div>
+
+                <input
+                  type="text"
+                  class="form-control form-control-lg border-left-0"
+                  id="exampleInputName"
+                  placeholder="nom"
+                  [(ngModel)]="nom"
+                  name="nom"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputEmail">Prénom</label>
+              <div class="input-group">
+                <div class="input-group-prepend bg-transparent">
+                  <span class="input-group-text bg-transparent border-right-0">
+                    <i class="mdi mdi-account-outline text-primary"></i>
+                  </span>
+                </div>
+
+                <input
+                  type="text"
+                  class="form-control form-control-lg border-left-0"
+                  id="exampleInputFirstName"
+                  placeholder="prenom"
+                  [(ngModel)]="prenom"
+                  name="prenom"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputEmail">email</label>
+              <div class="input-group">
+                <div class="input-group-prepend bg-transparent">
+                  <span class="input-group-text bg-transparent border-right-0">
+                    <i class="mdi mdi-account-outline text-primary"></i>
+                  </span>
+                </div>
+
+                <input
+                  type="text"
+                  class="form-control form-control-lg border-left-0"
+                  id="exampleInputEmail"
+                  placeholder="email"
+                  [(ngModel)]="email"
+                  name="email"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputEmail">Numero</label>
+              <div class="input-group">
+                <div class="input-group-prepend bg-transparent">
+                  <span class="input-group-text bg-transparent border-right-0">
+                    <i class="mdi mdi-account-outline text-primary"></i>
+                  </span>
+                </div>
+
+                <input
+                  type="text"
+                  class="form-control form-control-lg border-left-0"
+                  id="exampleInputNumero"
+                  placeholder="Numero"
+                  [(ngModel)]="numero"
+                  name="numero"
+                  required
+                />
+              </div>
+            </div>
+            <div class="my-3">
+              <button
+                class="btn btn-block btn-info btn-lg font-weight-medium auth-form-btn"
+              >
+                S'inscrire
+              </button>
+            </div>
+            <div class="text-center mt-4 font-weight-light">
+              Don't have an account?
+              <a routerLink="/salon/inscription" class="text-primary">Create</a>
+            </div>
+          </form>
+          <div *ngIf="errorMessage" class="error-message">
+            {{ errorMessage }}
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 login-half-bg d-flex flex-row"></div>
+    </div>
+  </div>
+</div>
+
+<app-footer-client></app-footer-client>

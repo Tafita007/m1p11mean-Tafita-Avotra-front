@@ -11,6 +11,7 @@ export class ClientComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadExternalStyleSheet('assets/css/css-C/bootstrap.min.css');
+    this.loadExternalStyleSheet('assets/css/css-C/style.css');
   }
 
   loadExternalStyleSheet(url: string): void {
