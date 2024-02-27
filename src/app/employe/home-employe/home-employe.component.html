@@ -1,23 +1,8 @@
-<div class="container-scroller">
-    <!-- partial:partials/_navbar.html -->
-    <app-header-employe>
-    </app-header-employe>
-    <!-- partial -->
-    <div class="container-fluid page-body-wrapper">
-        <!-- partial:partials/_sidebar.html -->
-        <app-sidebar-employe></app-sidebar-employe>
-        <!-- partial -->
-        <div class="main-panel">
-            <div class="content-wrapper">
-                <router-outlet></router-outlet>
-            </div>
-            <!-- content-wrapper ends -->
-            <!-- partial:partials/_footer.html -->
-            <app-footer-employe></app-footer-employe>
-            <!-- partial -->
-        </div>
-        <!-- main-panel ends -->
+<div class="container-xxl position-relative bg-white d-flex p-0">
+    <app-sidebar-employe></app-sidebar-employe>
+    <div class="content">
+        <app-header-employe></app-header-employe>
+        <router-outlet></router-outlet>
+        <app-footer-employe></app-footer-employe>
     </div>
-    <!-- page-body-wrapper ends -->
 </div>
-<!-- container-scroller -->

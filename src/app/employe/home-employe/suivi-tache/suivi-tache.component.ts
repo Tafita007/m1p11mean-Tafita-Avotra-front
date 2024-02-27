@@ -10,6 +10,23 @@ export class SuiviTacheComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.showModal);
+  }
+
+  showModal: boolean = false;
+  formData: any = {};
+
+  openModal() {
+    this.showModal = true;
+  }
+
+  closeModal() {
+    this.showModal = false;
+  }
+
+  submitForm() {
+    console.log('Formulaire soumis:', this.formData);
+    this.closeModal();
   }
 
 }

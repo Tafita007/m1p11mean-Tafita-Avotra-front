@@ -12,7 +12,7 @@ if (environment.production) {
 }
 
 if (process.env["NODE_ENV"] === 'test') {
-  environment.apiUrl = ''; // URL de l'API pour le test
+  environment.apiUrl = 'http://localhost:3000'; // URL de l'API pour le test
 }
 
 /*
