@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { LoginEmployeComponent } from '../employe/login-employe/login-employe.component';
 import { LoginClientComponent } from './login-client/login-client.component';
+import { ListRdvComponent } from './list-rdv/list-rdv.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,8 @@ const routes: Routes = [
       { path: "services", component: HomeComponent },
       { path: "inscription", component: InscriptionComponent },
       { path: "login", component: LoginClientComponent },
+      { path: "list-rdv", component: ListRdvComponent },
+
     ]
   },
 ];
