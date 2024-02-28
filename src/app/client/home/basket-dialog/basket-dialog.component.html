@@ -1,0 +1,89 @@
+<div class="dialog-component">
+  <div class="dialog-header">
+    <h2 class="dialog-title">La liste des services prises</h2>
+  </div>
+  <div class="list-of-services">
+    <table mat-table [dataSource]="takenServices" class="w-100">
+      <!-- Name Column -->
+      <ng-container matColumnDef="nom">
+        <th mat-header-cell *matHeaderCellDef>Nom</th>
+        <td mat-cell *matCellDef="let element ">{{ element?.nom }}</td>
+      </ng-container>
+
+      <!-- Duree Column -->
+      <ng-container matColumnDef="duree">
+        <th mat-header-cell *matHeaderCellDef>Durée</th>
+        <td mat-cell *matCellDef="let element">{{ element?.duree }}</td>
+      </ng-container>
+
+      <!-- Price Column -->
+      <ng-container matColumnDef="prix">
+        <th mat-header-cell *matHeaderCellDef>Prix</th>
+        <td mat-cell *matCellDef="let element">{{ element?.prix }}</td>
+      </ng-container>
+
+      <!-- Actions Column -->
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef>Action</th>
+        <td mat-cell *matCellDef="let element; let i = index">
+          <button mat-icon-button (click)="removeService(i)">
+            <mat-icon>remove_circle</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
+  <p>
+    <div class="zone-total">
+      <b>TOTAL = {{ someOfPrice() }}</b>
+    </div>
+
+  <p>
+  <div class="action-footer row ">
+    <div class="date-of-rdv col-5">
+
+      <div class="form-group">
+        <label for="exampleInputEmail">Date de rendez-vous</label>
+        <div class="input-group">
+          <div class="input-group-prepend bg-transparent">
+            <span class="input-group-text bg-transparent border-right-0">
+              <i class="mdi mdi-calendar-month text-primary"></i>
+            </span>
+          </div>
+      <input
+          type="date"
+          class="form-control form-control-lg border-left-0"
+          id="exampleInputFirstName"
+          placeholder="prenom"
+          [(ngModel)]="dateRdv"
+          name="prenom"
+          required
+        />
+        </div>
+      </div>
+
+      
+
+    </div>
+
+    <div class="select-employe col-5">
+
+      <label for="exampleInputEmail">L'employé traitant</label>
+      <div class="col-lg-6">
+        <select [(ngModel)]="selectedEmploye" class="form-select py-3 border-white bg-transparent" aria-label="Default select example">
+            <option *ngFor="let item of listEmploye" [ngValue]="item">{{ item?.infosUtilisateur[0]?.infosPerso?.nom }}</option>
+        </select>
+    </div>
+    </div>
+    <div class="sumbit-button col-2">
+      <button  
+        (click)="validateBasket()" 
+        class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4"
+        >Valider
+      </button>
+    </div>
+  </div>
+</div>

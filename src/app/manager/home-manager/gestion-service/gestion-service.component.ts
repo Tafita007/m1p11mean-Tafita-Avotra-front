@@ -91,12 +91,11 @@ export class GestionServiceComponent implements OnInit {
 
   onInsertService(): void {
     if (this.ficheForm.valid) {
-      const newService: Service = {
+      const newService: any = {
         nom: this.ficheForm.value.nom,
         prix: this.ficheForm.value.prix,
         commission: this.ficheForm.value.commission,
         duree: this.ficheForm.value.duree,
-        _id: 0,
         idCategorie: this.ficheForm.value.idCategorie,
         image: 'salon.jpg'
       };

@@ -1,0 +1,35 @@
+<h2 class="detail-title">Les détails de votre rendez-vous</h2>
+
+<div class="detail-component">
+
+  <div class="prev-zone">
+    <button mat-icon-button [disabled]="currentIndex - 1 < 0" (click)="prev()">
+      <mat-icon>skip_previous</mat-icon>
+    </button>
+  </div>
+  <div class="details-zone">
+
+    <div class="card detail-body">
+      <h4 class="detail-body-content">
+        <b>nom :</b> {{ services[currentIndex]?.nom }}
+      </h4>
+
+      <h4 class="detail-body-content">
+        <b>prix :</b> {{ services[currentIndex]?.prix }} MGA
+      </h4>
+
+      <h4 class="detail-body-content">
+        <b>durée :</b> {{ services[currentIndex]?.duree }} min
+      </h4>
+    </div>
+  </div>
+  <div class="next-zone">
+    <button
+      mat-icon-button
+      [disabled]="currentIndex + 1 >= services?.length"
+      (click)="next()"
+    >
+      <mat-icon>skip_next</mat-icon>
+    </button>
+  </div>
+</div>

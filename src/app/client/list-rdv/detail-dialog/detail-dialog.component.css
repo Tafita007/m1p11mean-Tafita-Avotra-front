@@ -1,0 +1,16 @@
+.detail-component{
+    display: flex;
+    align-items: center;
+
+}
+.details-zone{
+    width: 20vw;
+}
+.detail-body{
+    padding-top: 10px;
+    padding-left: 10%;
+}
+.detail-title{
+    color : #8e1786;
+    text-align: center;
+}
