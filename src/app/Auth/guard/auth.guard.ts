@@ -24,9 +24,9 @@ export class AuthGuard implements CanActivate {
       if (role === 0) {
         this.router.navigate(['/salon/services']);
       } else if (role === 1) {
-        this.router.navigate(['/employe']);
+        this.router.navigate(['/employe/home/les-rendez-vous']);
       } else if (role === 2) {
-        this.router.navigate(['/manager']);
+        this.router.navigate(['/manager/home/gestion-du-personnel']);
       }
       return false;
     }
