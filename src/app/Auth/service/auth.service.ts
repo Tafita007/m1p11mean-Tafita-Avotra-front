@@ -8,10 +8,12 @@ import {Router} from '@angular/router'
 })
 export class AuthService {
 
-  private apiUrl = environment.apiUrl;
+  private apiUrl: string;
+  // private apiUrl = environment.apiUrl;
   private token: string | null = null;
 
   constructor(private http: HttpClient,private router:Router) {
+    this.apiUrl = environment.apiUrl;
     this.token = localStorage.getItem('token');
   }
 

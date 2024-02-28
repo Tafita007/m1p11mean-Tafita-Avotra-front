@@ -9,9 +9,12 @@ import { Categorie } from '../class/categorie';
 })
 export class CategorieService {
 
-  private apiUrl = environment.apiUrl;
+  private apiUrl: string;
+  // private apiUrl = environment.apiUrl;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    this.apiUrl = environment.apiUrl;
+  }
 
   getCategories(): Observable<Categorie[]> {
     return this.http.get<Categorie[]>(this.apiUrl+"/listeCategorie");

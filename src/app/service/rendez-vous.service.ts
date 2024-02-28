@@ -7,9 +7,12 @@ import { environment } from 'src/environments/environment';
 })
 export class RendezVousService {
 
-  private apiUrl = environment.apiUrl;
+  private apiUrl: string;
+  // private apiUrl = environment.apiUrl;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    this.apiUrl = environment.apiUrl;
+  }
 
   getAllRdv(idClient : string){
     /**
