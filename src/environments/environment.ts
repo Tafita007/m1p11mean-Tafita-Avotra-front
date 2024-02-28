@@ -8,7 +8,7 @@ export const environment = {
 };
 
 if (environment.production) {
-  environment.apiUrl = ''; 
+  environment.apiUrl = 'https://m1p11mean-tafita-avotra-back.onrender.com'; 
 }
 
 if (process.env["NODE_ENV"] === 'test') {
