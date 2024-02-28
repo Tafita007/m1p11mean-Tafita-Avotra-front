@@ -7,13 +7,13 @@ export const environment = {
   apiUrl: 'https://m1p11mean-tafita-avotra-back.onrender.com', 
 };
 
-if (environment.production) {
-  environment.apiUrl = 'https://m1p11mean-tafita-avotra-back.onrender.com'; 
-}
+// if (environment.production) {
+//   environment.apiUrl = 'https://m1p11mean-tafita-avotra-back.onrender.com'; 
+// }
 
-if (process.env["NODE_ENV"] === 'test') {
-  environment.apiUrl = 'https://m1p11mean-tafita-avotra-back.onrender.com'; // URL de l'API pour le test
-}
+// if (process.env["NODE_ENV"] === 'test') {
+//   environment.apiUrl = 'https://m1p11mean-tafita-avotra-back.onrender.com'; // URL de l'API pour le test
+// }
 
 /*
  * For easier debugging in development mode, you can import the following file
