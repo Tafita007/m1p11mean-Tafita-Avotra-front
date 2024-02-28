@@ -3,17 +3,15 @@ import { Injectable } from '@angular/core';
 import { Observable, catchError, map, of, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import {Router} from '@angular/router'
+import { ConfigUrlService } from 'src/app/service/util/config-url.service';
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  private apiUrl: string;
-  // private apiUrl = environment.apiUrl;
   private token: string | null = null;
 
-  constructor(private http: HttpClient,private router:Router) {
-    this.apiUrl = environment.apiUrl;
+  constructor(private http: HttpClient,private router:Router,private configURLService: ConfigUrlService) {
     this.token = localStorage.getItem('token');
   }
 
@@ -22,11 +20,11 @@ export class AuthService {
   }
 
   signup(user: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}/registration/0`, user);
+    return this.http.post(`${this.configURLService.getApiUrl()}/registration/0`, user);
   }
 
   login(credentials: any): Observable<boolean> {
-    return this.http.post<any>(`${this.apiUrl}/login`, credentials)
+    return this.http.post<any>(`${this.configURLService.getApiUrl()}/login`, credentials)
       .pipe(
         map(response => {
           const token = response.token;
