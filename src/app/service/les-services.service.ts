@@ -16,4 +16,13 @@ export class LesServicesService {
   getServices(): Observable<Service[]> {
     return this.http.get<Service[]>(this.apiUrl+"/listeService");
   }
+
+  insertService(service: any): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/insertService`, service);
+  }
+
+  updateService(id: string, service: any): Observable<any> {
+    return this.http.put<any>(`${this.apiUrl}/updateService/${id}`, service);
+  }
+  
 }

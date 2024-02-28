@@ -15,7 +15,6 @@ export class HeaderClientComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.token);
   }
 
   logout() {

@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:3000', 
+  apiUrl: 'https://m1p11mean-tafita-avotra-back.onrender.com', 
 };
 
 if (environment.production) {
@@ -12,7 +12,7 @@ if (environment.production) {
 }
 
 if (process.env["NODE_ENV"] === 'test') {
-  environment.apiUrl = 'http://localhost:3000'; // URL de l'API pour le test
+  environment.apiUrl = 'https://m1p11mean-tafita-avotra-back.onrender.com'; // URL de l'API pour le test
 }
 
 /*

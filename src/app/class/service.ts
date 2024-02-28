@@ -1,9 +1,9 @@
 export class Service {
-    _id!: Number;
+    _id!: string;
     nom!: string;
-    prix!: Number;
-    commission!: string;
-    duree!: Number;
+    prix!: number;
+    commission!: number;
+    duree!: number;
     idCategorie!: string;
     image!: string;
 }
