@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EmployeComponent } from './employe.component';
 import { LoginEmployeComponent } from './login-employe/login-employe.component';
-import { AuthGuard } from '../Auth/guard/auth.guard';
+import { Auth1Guard } from '../Auth/guard/auth1.guard';
 
 const routes: Routes = [
   {
@@ -10,7 +10,7 @@ const routes: Routes = [
     component: EmployeComponent,
     children: [
       { path: "Login-employe", component: LoginEmployeComponent },
-      { path: 'home', canActivate: [AuthGuard], loadChildren: () => import('./home-employe/home-employe.module').then(m => m.HomeEmployeModule) }
+      { path: 'home', canActivate: [Auth1Guard], loadChildren: () => import('./home-employe/home-employe.module').then(m => m.HomeEmployeModule) }
     ]
   },
 ];
