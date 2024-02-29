@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuard implements CanActivate {
+export class Auth1Guard implements CanActivate {
   constructor(private router: Router) {}
 
   decodeProfile(token: string): string {
@@ -25,7 +25,7 @@ export class AuthGuard implements CanActivate {
 
     console.log(role);
 
-    if (role === 0) {
+    if (role === 1) {
       return true;
     }
     else {
@@ -35,7 +35,7 @@ export class AuthGuard implements CanActivate {
 
 
   private handleUnauthorizedAccess(): boolean {
-    this.router.navigate(['/salon/login']);
+    this.router.navigate(['/employe/Login-employe']);
     return false;
   }
   

@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ManagerComponent } from './manager.component';
 import { LoginManagerComponent } from './login-manager/login-manager.component';
 import { HomeManagerComponent } from './home-manager/home-manager.component';
-import { AuthGuard } from '../Auth/guard/auth.guard';
+import { Auth2Guard } from '../Auth/guard/auth2.guard';
 
 const routes: Routes = [
   {
@@ -11,7 +11,7 @@ const routes: Routes = [
     component: ManagerComponent,
     children: [
       { path: "Login-manager", component: LoginManagerComponent },
-      { path: 'home', canActivate: [AuthGuard], loadChildren: () => import('./home-manager/home-manager.module').then(m => m.HomeManagerModule) }
+      { path: 'home', canActivate: [Auth2Guard], loadChildren: () => import('./home-manager/home-manager.module').then(m => m.HomeManagerModule) }
     ]
   },
 ];
