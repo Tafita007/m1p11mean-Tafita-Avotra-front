@@ -6,29 +6,19 @@
             <div class="col-lg-6 d-flex align-items-center justify-content-center">
                 <div class="auth-form-transparent text-left p-3">
                     <div class="brand-logo">
-                    <img src="./assets/images/logo-dark.svg" alt="logo">
+                    <!-- <img src="./assets/images/logo-dark.svg" alt="logo"> -->
                     </div>
-                    <h4>LOGIN</h4>
+                    <h2>LOGIN</h2>
                     <form (ngSubmit)="onLogin()" class="pt-3">
                         <div class="form-group">
                             <label for="exampleInputEmail">Nom d'utilisateur</label>
                             <div class="input-group">
-                                <div class="input-group-prepend bg-transparent">
-                                    <span class="input-group-text bg-transparent border-right-0">
-                                    <i class="mdi mdi-account-outline text-primary"></i>
-                                    </span>
-                                </div>
                                 <input type="text" class="form-control form-control-lg border-left-0" id="exampleInputEmail" placeholder="Nom d'utilisateur" [(ngModel)]="username" name="username" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword">Mot de passe</label>
                             <div class="input-group">
-                                <div class="input-group-prepend bg-transparent">
-                                    <span class="input-group-text bg-transparent border-right-0">
-                                    <i class="mdi mdi-lock-outline text-primary"></i>
-                                    </span>
-                                </div>
                                 <input type="password" class="form-control form-control-lg border-left-0" id="exampleInputPassword" placeholder="Mot de passe" [(ngModel)]="password" name="password" required>                        
                             </div>
                         </div>
@@ -39,7 +29,7 @@
                             <button class="btn btn-block btn-info btn-lg font-weight-medium auth-form-btn">LOGIN</button>
                         </div>
                         <div class="text-center mt-4 font-weight-light">
-                            Don't have an account? <a routerLink="/salon/inscription" class="text-primary">Create</a>
+                            Vous n’avez pas de compte ? <a routerLink="/salon/inscription" class="text-primary">Inscrivez-vous</a>
                         </div>
                     </form>
                     <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
